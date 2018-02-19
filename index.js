@@ -5,12 +5,12 @@ var litecore = module.exports;
 // module information
 litecore.version = 'v' + require('./package.json').version;
 litecore.versionGuard = function(version) {
-  if (version !== undefined) {
+  /*if (version !== undefined) {
     var message = 'More than one instance of litecore-lib found. ' +
       'Please make sure to require litecore-lib and check that submodules do' +
       ' not also include their own litecore-lib dependency.';
     throw new Error(message);
-  }
+  }*/
 };
 litecore.versionGuard(global._litecore);
 global._litecore = litecore.version;
